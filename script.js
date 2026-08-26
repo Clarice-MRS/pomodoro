@@ -3,8 +3,6 @@ let time = startingMinutes * 60;
 
 const countdownEl = document.getElementById('timer');
 
-setInterval(updateCountdown, 1000);
-
 function updateCountdown() {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
@@ -14,6 +12,16 @@ function updateCountdown() {
     countdownEl.innerHTML = `${minutes}:${seconds}`
     time--;
 }
+
+function iniciarContagem(){
+
+    const iniciar = document.getElementById("iniciar-timer");
+
+    iniciar.addEventListener("click", updateCountdown);
+
+    setInterval(updateCountdown, 1000); 
+}
+
 
 /*
 iniciar quando clicar no botão
