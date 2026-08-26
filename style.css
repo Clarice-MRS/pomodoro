@@ -1,0 +1,20 @@
+html {
+    background-color: #f2ffca;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-timer {
+    background: linear-gradient(180deg, #f3626c, #feb47b);
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    width: 100px;
+    border-radius: 30px;
+
+}
