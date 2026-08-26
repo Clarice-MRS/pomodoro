@@ -24,10 +24,19 @@ function iniciarContagem(){
 
 
 /*
+
 iniciar quando clicar no botão
+
+se clica no botão iniciar depois de já iniciado ele aumenta essa condição setInterval(updateCountdown, 1000); 
+
 poder voltar do começo
+
 poder alterar pausa
+
 adicionar toque quando a pausa começar
+
 poder configurar tempo
+
 entender porque faz 25 25 24
+
 */
