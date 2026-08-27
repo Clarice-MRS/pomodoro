@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
-    background: linear-gradient(180deg, #f3626c, #feb47b);
+    background: rgb(247, 202, 202);
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 
 .container-timer {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     background-color: #f2ffca;
     align-items: center;
     justify-content: center;
@@ -23,32 +23,55 @@ body {
 }
 
 .container-timer h2 {
+    flex-basis: 100%;
+    text-align: center;
     font-family: "Roboto Condensed";
     font-size: 10vh;
 }
 
-#configurar-timer{
+.container-timer #configurar-timer{
     background-color: transparent;
     border: none;
+    width: 50px;
 }
 
 #configurar-timer img{
     width: 5vh;
 }
 
-#iniciar-timer{
+#configurar-timer:hover {
+    box-shadow: 2px 2px 2px rgb(26, 25, 25);
+    border-radius: 4px;
+    transform: scale(1.1);
+}
+
+.container-timer #iniciar-timer{
     background-color: transparent;
     border: none;
+    margin-right: 5vh;
+}
+
+#iniciar-timer:hover {
+    box-shadow: 2px 2px 2px rgb(26, 25, 25);
+    border-radius: 4px;
+    transform: scale(1.1);
 }
 
 #iniciar-timer img{
     width: 5vh;
 }
 
-#resetar-timer{
+.container-timer #resetar-timer{
     background-color: transparent;
     border: none
 }
+
+#resetar-timer:hover{
+    box-shadow: 2px 2px 2px rgb(26, 25, 25);
+    border-radius: 4px;
+    transform: scale(1.1);
+}
+
 
 #resetar-timer img{
     width: 5vh;
