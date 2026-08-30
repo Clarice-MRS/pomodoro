@@ -3,7 +3,10 @@ let time = startingMinutes * 60;
 let interval = null; 
 
 const countdownEl = document.getElementById('timer');
-const iniciar = document.getElementById("iniciar-timer");
+const startButton = document.getElementById("iniciar-timer");
+const resetButton = document.getElementById("resetar-timer");
+const startText = document.getElementById("texto-iniciar");
+const startIcon = document.getElementById("icone-iniciar");
 
 function updateCountdown() {
     const minutes = Math.floor(time / 60);
@@ -15,21 +18,37 @@ function updateCountdown() {
     time--;
 }
 
-function iniciarContagem(){
+function startOrPause() {
+    if (interval === null) {
+        if (time <= 0) {
+            return;
+        }
 
-    if (interval === null && time > 0) {
         interval = setInterval(updateCountdown, 1000);
-    } if (terminarContagem())
+        startIcon.textContent = "⏸";
+        startText.textContent = "Pausar";
+    } else {
+        clearInterval(interval);
+        interval = null;
 
-    iniciar.addEventListener("click", iniciarContagem);
-}
-
-function terminarContagem(){
-    if (time === 0) {
-        clearInterval(setInterval(updateCountdown, 1000));
+        startIcon.textContent = "▶";
+        startText.textContent = "Continuar";
     }
 }
 
+function resetTimer() {
+    clearInterval(interval);
+    interval = null;
+
+    time = startingMinutes * 60;
+    countdownEl.textContent = "25:00";
+
+    startIcon.textContent = "▶";
+    startText.textContent = "Iniciar";
+}
+
+startButton.addEventListener("click", startOrPause);
+resetButton.addEventListener("click", resetTimer);
 
 /*
 

@@ -8,16 +8,23 @@
 </head>
 <body>
     <div class="container-timer">
-        <button id="configurar-timer">
-            <img src="img/settings.svg" alt="configurar">
-        </button>
         <h2 id="timer">25:00</h2>
-        <button onclick="iniciarContagem()"  id="iniciar-timer">
-          <img src="img/play.svg" alt="iniciar">
-        </button>
-        <button id="resetar-timer">
-            <img src="img/stop.svg" alt="parar">
-        </button>
+
+        <div class="timer-buttons">
+            <button id="iniciar-timer">
+                <span id="icone-iniciar">▶</span>
+                <span id="texto-iniciar">Iniciar</span>
+            </button>
+
+            <button id="resetar-timer">
+                <span>↻</span>
+                <span>Reiniciar</span>
+            </button>
+
+            <button id="configurar-timer">
+                <img src="img/settings.svg" alt="Configurar">
+            </button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
